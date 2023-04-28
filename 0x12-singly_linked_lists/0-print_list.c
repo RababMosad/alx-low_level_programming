@@ -4,24 +4,24 @@
  * _strlen - returns the length of a string
  * @string: the string whose length to check
  *
- * Return:integer length of string
+ * Return: integer length of string
  */
-int _strlen(char string)
+int _strlen(char *string)
 {
 	int i = 0;
 
 	if (!string)
 		return (0);
-	while (string++)
+	while (*string++)
 		i++;
 	return (i);
 }
 
 /**
  * print_list - prints a linked lists
- * @node: pointer to first node
+ * @h: pointer to first node
  *
- * Return:size of list
+ * Return: size of list
  */
 size_t print_list(const list_t *h)
 {
