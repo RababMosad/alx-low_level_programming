@@ -23,14 +23,14 @@ int _strlen(char string)
  *
  * Return:size of list
  */
-size_t print_list(const list_t *node)
+size_t print_list(const list_t *h)
 {
 	size_t i = 0;
 
-	while (node)
+	while (h)
 	{
-		printf("[%d] %s\n", _strlen(node->str), node->str ? node->str : "(nil)");
-		node = node->next;
+		printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
+		h = h->next;
 		i++;
 	}
 	return (i);
